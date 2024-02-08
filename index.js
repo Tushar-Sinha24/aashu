@@ -11,10 +11,6 @@ app.use(express.json());
 app.use(cors()); 
 app.use('/api/user', userRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
 pool.getConnection((err, connection) => {
     if (err) {
       console.error('Error connecting to database: ' + err.stack);
